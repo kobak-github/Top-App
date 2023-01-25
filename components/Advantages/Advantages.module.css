@@ -12,4 +12,5 @@ margin-bottom: 30px;
 
 .vline{
   border-left: 1px solid var(--gray-light);
+  justify-self: center;
 }
