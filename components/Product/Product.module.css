@@ -124,6 +124,9 @@
   max-height: auto;
   padding: 30px;
 }
+.ratingTitle a {
+  color: var(--primaty);
+}
 
 @media screen and (max-width: 1320px) {
   .product{
