@@ -1,4 +1,4 @@
-.product{
+.product {
   display: grid;
   grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratingstart] auto [end];
   margin-top: 30px;
@@ -9,25 +9,31 @@
   grid-column: start / logoend;
   grid-row: 1 / span 2;
 }
-.title, .tags{
+.title,
+.tags {
   grid-column: titlestart / middle;
 }
-.price, .priceTitle{
+.price,
+.priceTitle {
   grid-column: pricestart / priceend;
   white-space: nowrap;
 }
-.credit, .creditTitle{
+.credit,
+.creditTitle {
   grid-column: creditstart / creditend;
   white-space: nowrap;
 }
-.rating, .ratingTitle{
+.rating,
+.ratingTitle {
   grid-column: ratingstart / end;
   white-space: nowrap;
 }
-.description, .hline, .actions{
+.description,
+.hline,
+.actions {
   grid-column: start / end;
 }
-.hline{
+.hline {
   border-bottom: 1px solid var(--gray-light);
 }
 .feature {
@@ -41,64 +47,65 @@
 .logo img {
   border-radius: 5px;
 }
-.title{
+.title {
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
   align-self: flex-end;
 }
-.category{
+.category {
   margin-top: 7px;
 }
-.price, .credit{
+.price,
+.credit {
   font-size: 20px;
   line-height: 27px;
   align-self: flex-end;
 }
-.oldPrice{
+.oldPrice {
   margin-left: 5px;
 }
-.credit span{
+.credit span {
   font-size: 14px;
   line-height: 19px;
 }
-.rating{
+.rating {
   align-self: flex-end;
 }
-.description{
+.description {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 15px;
 }
 .priceTitle,
 .creditTitle,
-.ratingTitle{
+.ratingTitle {
   font-weight: 300;
   font-size: 14px;
   line-height: 19px;
 }
-.btn + .btn{
+.btn + .btn {
   margin-left: 20px;
 }
-.advBlock{
+.advBlock {
   font-size: 16px;
   line-height: 22px;
 }
-.advTitle{
+.advTitle {
   font-weight: 600;
   margin-bottom: 5px;
 }
-.advantages{
+.advantages {
   border-left: 2px solid var(--green);
   padding-left: 15px;
   margin-bottom: 20px;
 }
-.disadvantages{
+.disadvantages {
   border-left: 2px solid var(--red);
   padding-left: 15px;
 }
 
-.characteristics{
+.characteristics {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: baseline;
@@ -107,153 +114,149 @@
   line-height: 32px;
   gap: 10px;
 }
-.characteristicsName{
+.characteristicsName {
   font-weight: 600;
 }
-.characteristicsDots{
+.characteristicsDots {
   border-bottom: 1px dashed var(--gray-light);
   margin-bottom: 5px;
 }
 
-.closed{
+.reviews {
   overflow: hidden;
-  max-height: 0;
-  padding: 0;
-}
-.opened{
-  max-height: auto;
   padding: 30px;
 }
+
 .ratingTitle a {
   color: var(--primaty);
 }
 
 @media screen and (max-width: 1320px) {
-  .product{
+  .product {
     grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
-    grid-template-areas: "logo . title title title title title"
-    "logo . tags tags tags tags tags"
-    "price price price . credit . rating"
-    "priceTitle priceTitle priceTitle . creditTitle . ratingTitle"
-    "hline hline hline hline hline hline hline"
-    "description description description description description description description"
-    "feature feature feature feature feature feature feature"
-    "advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
-    "hline2 hline2 hline2 hline2 hline2 hline2 hline2"
-    "actions actions actions actions actions actions actions";
+    grid-template-areas:
+      'logo . title title title title title'
+      'logo . tags tags tags tags tags'
+      'price price price . credit . rating'
+      'priceTitle priceTitle priceTitle . creditTitle . ratingTitle'
+      'hline hline hline hline hline hline hline'
+      'description description description description description description description'
+      'feature feature feature feature feature feature feature'
+      'advBlock advBlock advBlock advBlock advBlock advBlock advBlock'
+      'hline2 hline2 hline2 hline2 hline2 hline2 hline2'
+      'actions actions actions actions actions actions actions';
   }
-  .logo{
+  .logo {
     grid-area: logo;
     margin-bottom: 20px;
   }
-  .title{
+  .title {
     grid-area: title;
   }
-  .tags{
+  .tags {
     grid-area: tags;
     margin-bottom: 20px;
   }
-  .price{
+  .price {
     grid-area: price;
   }
-  .credit{
+  .credit {
     grid-area: credit;
   }
-  .rating{
+  .rating {
     grid-area: rating;
   }
-  .priceTitle{
+  .priceTitle {
     grid-area: priceTitle;
   }
-  .creditTitle{
+  .creditTitle {
     grid-area: creditTitle;
   }
-  .ratingTitle{
+  .ratingTitle {
     grid-area: ratingTitle;
   }
-  .hline{
+  .hline {
     grid-area: hline;
   }
-  .description{
+  .description {
     grid-area: description;
   }
-  .feature{
+  .feature {
     grid-area: feature;
     margin-bottom: 20px;
   }
-  .advBlock{
+  .advBlock {
     grid-area: advBlock;
   }
-  .hline2{
+  .hline2 {
     grid-area: hline2;
   }
-  .actions{
+  .actions {
     grid-area: actions;
   }
 }
 
 @media screen and (max-width: 880px) {
-  .product{
+  .product {
     grid-template-columns: 70px 30px 1fr;
-    grid-template-areas: "logo . title"
-    "logo . tags"
-    "priceTitle priceTitle price"
-    "creditTitle creditTitle credit"
-    "ratingTitle ratingTitle rating"
-    "hline hline hline"
-    "description description description"
-    "feature feature feature"
-    "advBlock advBlock advBlock"
-    "hline2 hline2 hline2"
-    "actions actions actions";
+    grid-template-areas:
+      'logo . title'
+      'logo . tags'
+      'priceTitle priceTitle price'
+      'creditTitle creditTitle credit'
+      'ratingTitle ratingTitle rating'
+      'hline hline hline'
+      'description description description'
+      'feature feature feature'
+      'advBlock advBlock advBlock'
+      'hline2 hline2 hline2'
+      'actions actions actions';
   }
-  .price{
+  .price {
     margin-bottom: 10px;
   }
-  .credit{
+  .credit {
     margin-bottom: 10px;
   }
-  .rating{
+  .rating {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 480px){
-  .product{
+@media screen and (max-width: 480px) {
+  .product {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "logo"
-    "title"
-    "tags"
-    "priceTitle"
-    "price"
-    "creditTitle"
-    "credit"
-    "ratingTitle"
-    "rating"
-    "hline"
-    "description"
-    "feature"
-    "advBlock"
-    "hline2"
-    "actions";
+    grid-template-areas:
+      'logo'
+      'title'
+      'tags'
+      'priceTitle'
+      'price'
+      'creditTitle'
+      'credit'
+      'ratingTitle'
+      'rating'
+      'hline'
+      'description'
+      'feature'
+      'advBlock'
+      'hline2'
+      'actions';
   }
-  .characteristics{
+  .characteristics {
     grid-template-columns: 1fr;
-    grid-area: 
-    "characteristicsName"
-    "characteristicsValue";
+    grid-area: 'characteristicsName' 'characteristicsValue';
   }
-  .characteristicsDots{
+  .characteristicsDots {
     display: none;
   }
-  .characteristics{
+  .characteristics {
     line-height: 20px;
   }
-  .characteristicsName{
+  .characteristicsName {
     line-height: 20px;
     white-space: nowrap;
   }
-  .characteristicsValue{
+  .characteristicsValue {
     margin-bottom: 10px;
   }
 }
