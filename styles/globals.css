@@ -13,7 +13,8 @@
   --red: #fc836d;
   --red-light: #fea291;
   --green: #1dc37e;
-  --green-light: #C8F8E4;
+  --green-hover: #0bac69;
+  --green-light: #c8f8e4;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -27,10 +28,7 @@
     #0071ff33 160deg,
     transparent 360deg
   );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
