@@ -9,18 +9,18 @@
 .editable {
   cursor: pointer;
 }
-.ratingWrapper{
+.ratingWrapper {
   position: relative;
 }
-.error{
+.error {
   border: 1px solid var(--red);
 }
-.errorMessage{
+.errorMessage {
   position: absolute;
   bottom: -15px;
   left: 5px;
   color: var(--red);
 }
-.error svg{
+.error svg {
   stroke: var(--red);
 }
